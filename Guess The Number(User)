@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main()
+{   
+    srand(time(0));
+    int user = 0, num = rand() % 100+1,count=0;    //num = rand() % 100+1 for range 1 to 100
+    
+    while(user != num){
+        printf("Enter your value\n");
+        scanf("%d", &user);
+        if(user>num){
+            printf("Number is high\n");
+        }
+        else if(user<num){
+            printf("Number is low\n");
+        }
+        else{
+            printf("Congratulation!!You won\n");
+        }
+        count++;
+    }
+    printf("number of tries=%d", count);
+    return 0;
+}
